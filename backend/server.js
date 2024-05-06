@@ -4,17 +4,21 @@ const server = express()
 
 server.use(cors());
 
-server.get('/hello',function (req, res){
-    let mydata  = [
-        { name: "Apple", type: "Fruit" },
-        { name: "Banana", type: "Fruit" },
-        { name: "Carrot", type: "Vegetable" },
-        { name: "Broccoli", type: "Vegetable" },
-        { name: "Orange", type: "Fruit" },
-        { name: "Mozdalif", type: "Vegetable" },
-      ];
+server.get('/hello', function (req, res) {
+  let secondData = {
+    "wife": "rekha",
+    age : 29,
+    height : 5.4
+  }
 
-    res.json(mydata)
+  let data = {
+    "name": "mozdalif",
+    profession: "progarmmer",
+    age: 50,
+    "marriage": secondData
+  }
+
+  res.json(data)
 })
 
 
